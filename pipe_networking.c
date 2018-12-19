@@ -14,7 +14,6 @@ int server_handshake(int *to_client) {
   if (mkfifo("Luigi",0644) == -1){
     printf("Failure to make pipe. =(");
   }
-  mkfifo("Luigi",0644);
   
   int wk_pipe = open("Luigi",O_RDONLY);
   printf("The server has opened pipe\n");
